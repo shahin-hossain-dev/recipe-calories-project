@@ -1,10 +1,11 @@
 import "./App.css";
+import Navbar from "./components/Navbar/Navbar";
 
 function App() {
   return (
-    <>
-      <h1>Recipe Calories</h1>
-    </>
+    <div className="w-[95%] lg:w-10/12 mx-auto font-fira">
+      <Navbar />
+    </div>
   );
 }
 
