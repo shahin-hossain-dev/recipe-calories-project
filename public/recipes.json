@@ -1,0 +1,57 @@
+[
+    {
+      "recipe_image": "https://i.ibb.co/m61jtVX/1.png",
+      "recipe_id": "001",
+      "recipe_name": "Classic Spaghetti Carbonara",
+      "short_description": "A timeless Italian pasta dish with creamy sauce and crispy bacon.",
+      "ingredients": ["spaghetti", "eggs", "bacon", "Parmesan cheese", "black pepper"],
+      "preparing_time": 30,
+      "calories": "450"
+    },
+    {
+      "recipe_image": "https://i.ibb.co/RjDFGz4/salad.jpg",
+      "recipe_id": "002",
+      "recipe_name": "Mediterranean Quinoa Salad",
+      "short_description": "A refreshing salad bursting with Mediterranean flavors and hearty quinoa.",
+      "ingredients": ["quinoa", "cucumber", "tomatoes", "red onion", "feta cheese", "olives", "lemon juice", "olive oil", "fresh herbs"],
+      "preparing_time": 25,
+      "calories": "320"
+    },
+    {
+      "recipe_image": "https://i.ibb.co/CKR5kZh/fry.jpg",
+      "recipe_id": "003",
+      "recipe_name": "Spicy Thai Basil Chicken Stir-Fry",
+      "short_description": "An aromatic Thai dish with tender chicken, vibrant veggies, and bold spices.",
+      "ingredients": ["chicken breast", "bell peppers", "onion", "Thai basil leaves", "garlic", "chili peppers", "soy sauce", "fish sauce", "sesame oil"],
+      "preparing_time": 20,
+      "calories": "380"
+    },
+    {
+      "recipe_image": "https://i.ibb.co/x24Xnpr/2.png",
+      "recipe_id": "004",
+      "recipe_name": "Homestyle Beef Stew",
+      "short_description": "A comforting stew filled with tender beef, root vegetables, and rich broth.",
+      "ingredients": ["beef stew meat", "potatoes", "carrots", "onion", "celery", "beef broth", "tomato paste", "bay leaves", "herbs de Provence"],
+      "preparing_time": 120,
+      "calories": "520"
+    },
+    {
+      "recipe_image": "https://i.ibb.co/sPbcmrw/Baked-Salmon-with-Lemon-Dill-Sauce.png",
+      "recipe_id": "005",
+      "recipe_name": "Baked Salmon with Lemon Dill Sauce",
+      "short_description": "Flaky salmon fillets baked to perfection, served with a zesty lemon dill sauce.",
+      "ingredients": ["salmon fillets", "lemon", "fresh dill", "Greek yogurt", "mayonnaise", "Dijon mustard", "garlic", "salt", "black pepper"],
+      "preparing_time": 30,
+      "calories": "370"
+    },
+    {
+      "recipe_image": "https://i.ibb.co/0tJCf9T/Vegetable-Pad-Thai.jpg",
+      "recipe_id": "006",
+      "recipe_name": "Vegetable Pad Thai",
+      "short_description": "A vegetarian take on the classic Thai noodle dish packed with colorful veggies and tangy sauce.",
+      "ingredients": ["rice noodles", "tofu", "bean sprouts", "carrots", "bell peppers", "green onions", "peanuts", "tamarind paste", "soy sauce", "lime juice"],
+      "preparing_time": 35,
+      "calories": "300"
+    }
+  ]
+  

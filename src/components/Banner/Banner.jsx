@@ -5,7 +5,7 @@ const Banner = () => {
     backgroundImage: `linear-gradient(180deg,#150B2B00,#150B2BE6),url(${banner})`,
   };
   return (
-    <div className="">
+    <div className="font-lexend">
       <div
         style={background}
         className="h-[400px] lg:h-[600px]  bg-cover bg-center rounded-3xl w-full"
