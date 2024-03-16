@@ -22,26 +22,39 @@ const CookTable = ({
             <th className=" text-start font-medium  col-span-4 ">Name</th>
             <th className=" text-start font-medium  col-span-2">Times</th>
             <th className=" text-start font-medium col-span-2">Calories</th>
-            <th className=" text-center col-span-3">Action</th>
+            <th className=" text-center font-medium col-span-3">Action</th>
           </tr>
         </thead>
         <tbody>
+          <p
+            className={
+              wantCookRecipes.length === 0
+                ? "block text-2xl text-[#282828B3] text-center"
+                : "hidden"
+            }
+          >
+            Table Empty{" "}
+          </p>
           {/* cook data row  */}
           {wantCookRecipes.map((wantCookRecipe, idx) => (
             <tr
               key={wantCookRecipe.recipe_id}
               className=" grid grid-cols-12 place-items-center py-4 text-[#282828B3] bg-[#28282808]"
             >
-              <td className="col-span-1">{idx + 1}</td>
-              <td className="col-span-4">{wantCookRecipe.recipe_name}</td>
-              <td className="col-span-2">
+              <th className="col-span-1 text-start">{idx + 1}</th>
+              <td className="col-span-4 text-start ">
+                {wantCookRecipe.recipe_name}
+              </td>
+              <td className="col-span-2 text-start">
                 {wantCookRecipe.preparing_time} Minutes
               </td>
-              <td className="col-span-2">{wantCookRecipe.calories} Calories</td>
+              <td className="col-span-2 text-start">
+                {wantCookRecipe.calories} Calories
+              </td>
               <td className="col-span-3">
                 <button
                   onClick={() => handleSelectedRecipe(wantCookRecipe)}
-                  className="font-lexend px-3 py-1  bg-[#0BE58A] text-base  rounded-full text-[#150B2B]"
+                  className="font-lexend px-3 py-1  bg-[#0BE58A] text-base hover:bg-[#35f3a3] active:bg-[#0BE58A]  rounded-full text-[#150B2B]"
                 >
                   Preparing
                 </button>

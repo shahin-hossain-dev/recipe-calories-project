@@ -9,31 +9,41 @@ const CurrentCookTable = ({ currentCookRecipes }) => {
           ? "0" + currentCookRecipes.length
           : currentCookRecipes.length}
       </h2>
+
       <table className="w-[100%] mx-auto mt-6">
         {/* current cook table head  */}
         <thead className="text-base ">
-          <tr className=" mb-4  grid grid-cols-12 text-[#282828B3]">
+          <tr className=" mb-4  grid grid-cols-12 place-items-start text-[#282828B3]">
             <th className="col-span-1"></th>
             <th className=" text-start font-medium  col-span-5 ">Name</th>
             <th className=" text-start font-medium  col-span-3">Times</th>
-            <th className=" text-start font-medium col-span-3">Calories</th>
+            <th className=" text-start font-medium col-span-3 ">Calories</th>
           </tr>
         </thead>
         <tbody>
+          <p
+            className={
+              currentCookRecipes.length === 0
+                ? "block text-2xl text-[#282828B3] text-center"
+                : "hidden"
+            }
+          >
+            Table Empty{" "}
+          </p>
           {/*current cook data row  */}
           {currentCookRecipes.map((currentCookRecipe, idx) => (
             <tr
               key={currentCookRecipe.recipe_id}
-              className=" grid grid-cols-12 place-items-center py-4 text-[#282828B3] bg-[#28282808]"
+              className=" grid grid-cols-12 place-items-start p-4 text-[#282828B3] bg-[#28282808]"
             >
-              <td className="col-span-1 text-start">{idx + 1}</td>
+              <th className="col-span-1 text-start">{idx + 1}</th>
               <td className="col-span-5 text-start">
                 {currentCookRecipe.recipe_name}
               </td>
-              <td className="col-span-3 text-start">
+              <td className="col-span-3 text-start ">
                 {currentCookRecipe.preparing_time} Minutes
               </td>
-              <td className="col-span-3 text-start">
+              <td className="col-span-3 text-start ">
                 {currentCookRecipe.calories} Calories
               </td>
             </tr>
