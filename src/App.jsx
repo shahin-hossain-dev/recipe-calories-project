@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Recipes from "./components/Recipes/Recipes";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   const [wantCookRecipes, setWantCookRecipes] = useState([]);
@@ -77,6 +78,7 @@ function App() {
         </div>
       </div>
       <ToastContainer />
+      <Footer />
     </div>
   );
 }
