@@ -1,9 +1,18 @@
+import { useState } from "react";
 import "./App.css";
 import Banner from "./components/Banner/Banner";
+import CookTable from "./components/CookTable/CookTable";
 import Navbar from "./components/Navbar/Navbar";
 import Recipes from "./components/Recipes/Recipes";
 
 function App() {
+  const [wantCookRecipes, setWantCookRecipes] = useState([]);
+
+  const handleWantToCook = (recipe) => {
+    const newRecipes = [...wantCookRecipes, recipe];
+    setWantCookRecipes(newRecipes);
+  };
+
   return (
     <div className="w-[95%] lg:w-10/12 mx-auto font-fira">
       <Navbar />
@@ -21,13 +30,11 @@ function App() {
           </p>
         </div>
         <div className="grid lg:grid-cols-12 gap-6 mt-6 lg:mt-12">
-          <div className="lg:col-span-8">
-            <Recipes />
+          <div className="lg:col-span-7">
+            <Recipes handleWantToCook={handleWantToCook}></Recipes>
           </div>
-          <div className="lg:col-span-4 border rounded-2xl py-4">
-            <h2 className="text-center border-b text-2xl font-bold font-lexend w-2/3 mx-auto p-3">
-              Want to cook
-            </h2>
+          <div className="lg:col-span-5 border rounded-2xl py-4">
+            <CookTable wantCookRecipes={wantCookRecipes}></CookTable>
           </div>
         </div>
       </div>
