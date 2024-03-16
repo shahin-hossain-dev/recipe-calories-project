@@ -9,22 +9,42 @@ import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   const [wantCookRecipes, setWantCookRecipes] = useState([]);
+  const [currentCookRecipes, setCurrentCookRecipes] = useState([]);
   // handle want to cook recipe
   const handleWantToCook = (recipe) => {
-    const isExist = wantCookRecipes.find(
-      (wantCookRecipe) => wantCookRecipe.recipe_id === recipe.recipe_id
+    const isCurrentExist = currentCookRecipes.find(
+      (currentRecipe) => currentRecipe.recipe_id === recipe.recipe_id
     );
-    if (!isExist) {
-      if (wantCookRecipes.length < 6) {
-        const newRecipes = [...wantCookRecipes, recipe];
-        setWantCookRecipes(newRecipes);
-        toast.success("Recipe added in the table");
-      } else {
-        toast.error("Not allow over 6 recipes.");
-      }
+    if (isCurrentExist) {
+      toast.error("Recipe already cooking");
     } else {
-      toast.error("Recipe already exist in the table");
+      const isExist = wantCookRecipes.find(
+        (wantCookRecipe) => wantCookRecipe.recipe_id === recipe.recipe_id
+      );
+
+      if (!isExist) {
+        if (wantCookRecipes.length < 6) {
+          const newRecipes = [...wantCookRecipes, recipe];
+          setWantCookRecipes(newRecipes);
+          toast.success("Recipe added in the table");
+        } else {
+          toast.error("Not allow over 6 recipes.");
+        }
+      } else {
+        toast.error("Recipe already exist in the table");
+      }
     }
+  };
+
+  // handle selected recipe
+  const handleSelectedRecipe = (recipe) => {
+    const newWantCookRecipes = wantCookRecipes.filter(
+      (wantCookRecipe) => wantCookRecipe.recipe_id !== recipe.recipe_id
+    );
+    setWantCookRecipes(newWantCookRecipes);
+
+    const newCurrentRecipes = [...currentCookRecipes, recipe];
+    setCurrentCookRecipes(newCurrentRecipes);
   };
 
   return (
@@ -48,7 +68,11 @@ function App() {
             <Recipes handleWantToCook={handleWantToCook}></Recipes>
           </div>
           <div className="lg:col-span-5 border rounded-2xl py-4">
-            <CookTable wantCookRecipes={wantCookRecipes}></CookTable>
+            <CookTable
+              wantCookRecipes={wantCookRecipes}
+              handleSelectedRecipe={handleSelectedRecipe}
+              currentCookRecipes={currentCookRecipes}
+            ></CookTable>
           </div>
         </div>
       </div>

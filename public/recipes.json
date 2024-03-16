@@ -4,7 +4,13 @@
       "recipe_id": "001",
       "recipe_name": "Classic Spaghetti Carbonara",
       "short_description": "A timeless Italian pasta dish with creamy sauce and crispy bacon.",
-      "ingredients": ["spaghetti", "eggs", "bacon", "Parmesan cheese", "black pepper"],
+      "ingredients": [
+        "spaghetti (200g)",
+        "eggs (2)",
+        "bacon (150g)",
+        "Parmesan cheese (50g)",
+        "black pepper (to taste)"
+      ],
       "preparing_time": 30,
       "calories": "450"
     },
@@ -13,8 +19,17 @@
       "recipe_id": "002",
       "recipe_name": "Mediterranean Quinoa Salad",
       "short_description": "A refreshing salad bursting with Mediterranean flavors and hearty quinoa.",
-      "ingredients": ["quinoa", "cucumber", "tomatoes", "red onion", "feta cheese", "olives", "lemon juice", "olive oil", "fresh herbs"],
-      "preparing_time": 25,
+      "ingredients": [
+        "quinoa (1 cup)",
+        "cucumber (1)",
+        "tomatoes (2)",
+        "red onion (1/2)",
+        "feta cheese (100g)",
+        "olives (1/4 cup)",
+        "lemon juice (2 tbsp)",
+        "olive oil (2 tbsp)",
+        "fresh herbs (to taste)"
+      ],      "preparing_time": 25,
       "calories": "320"
     },
     {
@@ -22,7 +37,17 @@
       "recipe_id": "003",
       "recipe_name": "Spicy Thai Basil Chicken Stir-Fry",
       "short_description": "An aromatic Thai dish with tender chicken, vibrant veggies, and bold spices.",
-      "ingredients": ["chicken breast", "bell peppers", "onion", "Thai basil leaves", "garlic", "chili peppers", "soy sauce", "fish sauce", "sesame oil"],
+      "ingredients": [
+        "chicken breast (400g)",
+        "bell peppers (2)",
+        "onion (1)",
+        "Thai basil leaves (1 cup)",
+        "garlic (3 cloves)",
+        "chili peppers (2)",
+        "soy sauce (2 tbsp)",
+        "fish sauce (1 tbsp)",
+        "sesame oil (1 tbsp)"
+      ],
       "preparing_time": 20,
       "calories": "380"
     },
@@ -31,7 +56,17 @@
       "recipe_id": "004",
       "recipe_name": "Homestyle Beef Stew",
       "short_description": "A comforting stew filled with tender beef, root vegetables, and rich broth.",
-      "ingredients": ["beef stew meat", "potatoes", "carrots", "onion", "celery", "beef broth", "tomato paste", "bay leaves", "herbs de Provence"],
+      "ingredients": [
+        "beef stew meat (500g)",
+        "potatoes (3)",
+        "carrots (2)",
+        "onion (1)",
+        "celery (2 stalks)",
+        "beef broth (4 cups)",
+        "tomato paste (2 tbsp)",
+        "bay leaves (2)",
+        "herbs de Provence (1 tbsp)"
+      ],
       "preparing_time": 120,
       "calories": "520"
     },
@@ -40,7 +75,17 @@
       "recipe_id": "005",
       "recipe_name": "Baked Salmon with Lemon Dill Sauce",
       "short_description": "Flaky salmon fillets baked to perfection, served with a zesty lemon dill sauce.",
-      "ingredients": ["salmon fillets", "lemon", "fresh dill", "Greek yogurt", "mayonnaise", "Dijon mustard", "garlic", "salt", "black pepper"],
+      "ingredients": [
+        "salmon fillets (4)",
+        "lemon (1)",
+        "fresh dill (2 tbsp)",
+        "Greek yogurt (1/2 cup)",
+        "mayonnaise (1/4 cup)",
+        "Dijon mustard (1 tbsp)",
+        "garlic (2 cloves)",
+        "salt (to taste)",
+        "black pepper (to taste)"
+      ],
       "preparing_time": 30,
       "calories": "370"
     },
@@ -49,7 +94,18 @@
       "recipe_id": "006",
       "recipe_name": "Vegetable Pad Thai",
       "short_description": "A vegetarian take on the classic Thai noodle dish packed with colorful veggies and tangy sauce.",
-      "ingredients": ["rice noodles", "tofu", "bean sprouts", "carrots", "bell peppers", "green onions", "peanuts", "tamarind paste", "soy sauce", "lime juice"],
+      "ingredients": [
+        "rice noodles (200g)",
+        "tofu (200g)",
+        "bean sprouts (1 cup)",
+        "carrots (1)",
+        "bell peppers (2)",
+        "green onions (3)",
+        "peanuts (1/4 cup)",
+        "tamarind paste (2 tbsp)",
+        "soy sauce (2 tbsp)",
+        "lime juice (2 tbsp)"
+      ],
       "preparing_time": 35,
       "calories": "300"
     }

@@ -1,12 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
+import CurrentCookTable from "../CurrentCookTable/CurrentCookTable";
 
-const CookTable = ({ wantCookRecipes }) => {
-  console.log(wantCookRecipes);
+const CookTable = ({
+  wantCookRecipes,
+  handleSelectedRecipe,
+  currentCookRecipes,
+}) => {
   return (
     <div>
       <h2 className="text-center border-b text-2xl font-bold font-lexend w-2/3 mx-auto p-3">
         Want to cook:{" "}
-        {wantCookRecipes.length < 10
+        {wantCookRecipes.length < 10 && wantCookRecipes.length > 0
           ? "0" + wantCookRecipes.length
           : wantCookRecipes.length}
       </h2>
@@ -35,8 +39,10 @@ const CookTable = ({ wantCookRecipes }) => {
               </td>
               <td className="col-span-2">{wantCookRecipe.calories} Calories</td>
               <td className="col-span-3">
-                {" "}
-                <button className="font-lexend px-3 py-1  bg-[#0BE58A] text-base  rounded-full text-[#150B2B]">
+                <button
+                  onClick={() => handleSelectedRecipe(wantCookRecipe)}
+                  className="font-lexend px-3 py-1  bg-[#0BE58A] text-base  rounded-full text-[#150B2B]"
+                >
                   Preparing
                 </button>
               </td>
@@ -44,6 +50,10 @@ const CookTable = ({ wantCookRecipes }) => {
           ))}
         </tbody>
       </table>
+      {/* Current table  */}
+      <CurrentCookTable
+        currentCookRecipes={currentCookRecipes}
+      ></CurrentCookTable>
     </div>
   );
 };
