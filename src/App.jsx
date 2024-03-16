@@ -4,13 +4,27 @@ import Banner from "./components/Banner/Banner";
 import CookTable from "./components/CookTable/CookTable";
 import Navbar from "./components/Navbar/Navbar";
 import Recipes from "./components/Recipes/Recipes";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   const [wantCookRecipes, setWantCookRecipes] = useState([]);
-
+  // handle want to cook recipe
   const handleWantToCook = (recipe) => {
-    const newRecipes = [...wantCookRecipes, recipe];
-    setWantCookRecipes(newRecipes);
+    const isExist = wantCookRecipes.find(
+      (wantCookRecipe) => wantCookRecipe.recipe_id === recipe.recipe_id
+    );
+    if (!isExist) {
+      if (wantCookRecipes.length < 6) {
+        const newRecipes = [...wantCookRecipes, recipe];
+        setWantCookRecipes(newRecipes);
+        toast.success("Recipe added in the table");
+      } else {
+        toast.error("Not allow over 6 recipes.");
+      }
+    } else {
+      toast.error("Recipe already exist in the table");
+    }
   };
 
   return (
@@ -38,6 +52,7 @@ function App() {
           </div>
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 }

@@ -1,17 +1,13 @@
 import React from "react";
 
-const CookTable = ({ wantCookRecipes }) => {
-  console.log(wantCookRecipes);
+const CurrentCookTable = () => {
   return (
     <div>
       <h2 className="text-center border-b text-2xl font-bold font-lexend w-2/3 mx-auto p-3">
-        Want to cook:{" "}
-        {wantCookRecipes.length < 10
-          ? "0" + wantCookRecipes.length
-          : wantCookRecipes.length}
+        Currently cooking:
       </h2>
       <table className="w-[100%] mx-auto mt-6">
-        {/* cook table head  */}
+        {/* current cook table head  */}
         <thead className="text-base ">
           <tr className=" mb-4  grid grid-cols-12 text-[#282828B3]">
             <th className="col-span-1"></th>
@@ -22,7 +18,7 @@ const CookTable = ({ wantCookRecipes }) => {
           </tr>
         </thead>
         <tbody>
-          {/* cook data row  */}
+          {/*current cook data row  */}
           {wantCookRecipes.map((wantCookRecipe, idx) => (
             <tr
               key={wantCookRecipe.recipe_id}
@@ -36,7 +32,7 @@ const CookTable = ({ wantCookRecipes }) => {
               <td className="col-span-2">{wantCookRecipe.calories} Calories</td>
               <td className="col-span-3">
                 {" "}
-                <button className="font-lexend px-3 py-1  bg-[#0BE58A] text-base  rounded-full text-[#150B2B]">
+                <button className=" px-3 py-1  bg-[#0BE58A] text-base  rounded-full text-[#150B2B]">
                   Preparing
                 </button>
               </td>
@@ -48,4 +44,4 @@ const CookTable = ({ wantCookRecipes }) => {
   );
 };
 
-export default CookTable;
+export default CurrentCookTable;
