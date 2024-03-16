@@ -21,15 +21,17 @@ const CurrentCookTable = ({ currentCookRecipes }) => {
           </tr>
         </thead>
         <tbody>
-          <p
-            className={
-              currentCookRecipes.length === 0
-                ? "block text-2xl text-[#282828B3] text-center"
-                : "hidden"
-            }
-          >
-            Table Empty{" "}
-          </p>
+          <tr>
+            <td
+              className={
+                currentCookRecipes.length === 0
+                  ? "block text-2xl text-[#282828B3] text-center"
+                  : "hidden"
+              }
+            >
+              Table Empty{" "}
+            </td>
+          </tr>
           {/*current cook data row  */}
           {currentCookRecipes.map((currentCookRecipe, idx) => (
             <tr
