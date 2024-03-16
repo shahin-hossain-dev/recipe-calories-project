@@ -68,6 +68,7 @@ function App() {
           <div className="lg:col-span-7">
             <Recipes handleWantToCook={handleWantToCook}></Recipes>
           </div>
+          {/* cook table */}
           <div className="lg:col-span-5 border rounded-2xl py-4 shadow-lg ">
             <CookTable
               wantCookRecipes={wantCookRecipes}

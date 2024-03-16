@@ -6,12 +6,12 @@ import { FaLinkedin } from "react-icons/fa";
 const Footer = () => {
   return (
     <div>
-      <footer className=" mt-12 lg:mt-24 bg-[#12132D0D] py-12 lg:p-24">
+      <footer className=" mt-12 lg:mt-24 py-12 lg:p-24">
         <div className="flex flex-col items-center space-y-6">
           <a className="text-[#150B2B] text-2xl lg:text-3xl font-bold font-lexend">
             Recipe Calories
           </a>
-          <p className="text-[#150B2B99] text-secondary-color mx-auto px-3 lg:w-6/12 text-base text-center inter-font">
+          <p className="text-[#150B2B99] text-secondary-color mx-auto px-3 lg:w-6/12 text-base text-center font-lexend">
             Explore endless culinary possibilities with Recipe Calories. Embrace
             the joy of cooking, one delicious recipe at a time.
           </p>

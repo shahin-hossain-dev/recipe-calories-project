@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import CurrentCookTable from "../CurrentCookTable/CurrentCookTable";
 
 const CookTable = ({
@@ -26,6 +25,7 @@ const CookTable = ({
           </tr>
         </thead>
         <tbody>
+          {/* Empty text display  */}
           <tr>
             <td
               className={
@@ -34,7 +34,7 @@ const CookTable = ({
                   : "hidden"
               }
             >
-              Table Empty{" "}
+              Table Empty
             </td>
           </tr>
           {/* cook data row  */}
@@ -56,7 +56,7 @@ const CookTable = ({
               <td className="col-span-3">
                 <button
                   onClick={() => handleSelectedRecipe(wantCookRecipe)}
-                  className="font-lexend px-3 py-1  bg-[#0BE58A] text-base hover:bg-[#35f3a3] active:bg-[#0BE58A]  rounded-full text-[#150B2B]"
+                  className="font-lexend px-3 py-2 font-medium  bg-[#0BE58A] text-sm hover:bg-[#35f3a3] active:bg-[#0BE58A]  rounded-full text-[#150B2B]"
                 >
                   Preparing
                 </button>

@@ -30,6 +30,7 @@ const CurrentCookTable = ({ currentCookRecipes }) => {
           </tr>
         </thead>
         <tbody>
+          {/* Empty text display  */}
           <tr>
             <td
               className={
@@ -38,7 +39,7 @@ const CurrentCookTable = ({ currentCookRecipes }) => {
                   : "hidden"
               }
             >
-              Table Empty{" "}
+              Table Empty
             </td>
           </tr>
           {/*current cook data row  */}
