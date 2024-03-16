@@ -48,7 +48,7 @@ function App() {
   };
 
   return (
-    <div className="w-[95%] lg:w-10/12 mx-auto font-fira">
+    <div className="w-[95%] lg:w-10/12 mx-auto font-fira ">
       <Navbar />
       <Banner />
       {/* our recipe section start */}
@@ -67,7 +67,7 @@ function App() {
           <div className="lg:col-span-7">
             <Recipes handleWantToCook={handleWantToCook}></Recipes>
           </div>
-          <div className="lg:col-span-5 border rounded-2xl py-4">
+          <div className="lg:col-span-5 border rounded-2xl py-4 shadow-lg ">
             <CookTable
               wantCookRecipes={wantCookRecipes}
               handleSelectedRecipe={handleSelectedRecipe}

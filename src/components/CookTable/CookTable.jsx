@@ -7,7 +7,7 @@ const CookTable = ({
   currentCookRecipes,
 }) => {
   return (
-    <div>
+    <div className="lg:sticky lg:top-0">
       <h2 className="text-center border-b text-2xl font-bold font-lexend w-2/3 mx-auto p-3">
         Want to cook:{" "}
         {wantCookRecipes.length < 10 && wantCookRecipes.length > 0
@@ -48,10 +48,10 @@ const CookTable = ({
                 {wantCookRecipe.recipe_name}
               </td>
               <td className="col-span-2 text-start">
-                {wantCookRecipe.preparing_time} Minutes
+                {wantCookRecipe.preparing_time} minutes
               </td>
               <td className="col-span-2 text-start">
-                {wantCookRecipe.calories} Calories
+                {wantCookRecipe.calories} calories
               </td>
               <td className="col-span-3">
                 <button

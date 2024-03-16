@@ -1,6 +1,15 @@
 import React from "react";
 
 const CurrentCookTable = ({ currentCookRecipes }) => {
+  // calculate time
+  const totalTime = currentCookRecipes.reduce((preValue, curValue) => {
+    return preValue + curValue.preparing_time;
+  }, 0);
+  //   calculate Calories
+  const totalCalories = currentCookRecipes.reduce((preValue, curValue) => {
+    return preValue + parseFloat(curValue.calories);
+  }, 0);
+
   return (
     <div className="mt-12">
       <h2 className="text-center border-b text-2xl font-bold font-lexend w-2/3 mx-auto p-3">
@@ -43,13 +52,23 @@ const CurrentCookTable = ({ currentCookRecipes }) => {
                 {currentCookRecipe.recipe_name}
               </td>
               <td className="col-span-3 text-start ">
-                {currentCookRecipe.preparing_time} Minutes
+                {currentCookRecipe.preparing_time} minutes
               </td>
               <td className="col-span-3 text-start ">
-                {currentCookRecipe.calories} Calories
+                {currentCookRecipe.calories} calories
               </td>
             </tr>
           ))}
+          <tr className="border-t grid grid-cols-12 place-items-center mt-6 p-4 text-[#282828B3] ">
+            <th className="col-span-4 text-lg text-start">Calculation</th>
+
+            <td className="col-span-4 text-start font-medium text-lg">
+              Total Time= <br></br> {totalTime} minutes
+            </td>
+            <td className="col-span-4 text-start font-medium text-lg">
+              Total Calories= <br></br> {totalCalories} calories
+            </td>
+          </tr>
         </tbody>
       </table>
     </div>
