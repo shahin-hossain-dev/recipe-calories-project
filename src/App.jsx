@@ -53,7 +53,7 @@ function App() {
       <Navbar />
       <Banner />
       {/* our recipe section start */}
-      <div className="mt-24">
+      <div className="mt-12 lg:mt-24">
         <div className="w-10/12 lg:w-8/12 mx-auto space-y-4 text-center">
           <h2 className="font-lexend text-2xl lg:text-3xl font-bold text-[#150B2B]">
             Our Recipes

@@ -14,23 +14,24 @@ const Recipe = ({ recipe, handleWantToCook }) => {
   return (
     <div>
       {/* recipe Card */}
-      <div className="card border p-5 bg-base-100 shadow-xl">
+      <div className="card border p-5 bg-base-100 shadow-xl h-full">
         <figure>
           <img
             src={recipe_image}
-            className="w-full lg:h-[160px]  rounded-2xl"
-            alt="Shoes"
+            className="w-full lg:h-[200px]  rounded-2xl"
+            alt="Recipe"
           />
         </figure>
         {/* recipe Card Body*/}
-        <div className="space-y-6 mt-6">
+        <div className="flex flex-col justify-between h-full mt-6">
           <h2 className="card-title ">{recipe_name}</h2>
-          <p>
+          {/* <p>
             {short_description.length > 60
               ? short_description.split("").slice(0, 60).join("") + "..."
               : short_description}
-          </p>
-
+          </p> */}
+          <p>{short_description}</p>
+          <hr />
           <div>
             <p className="text-xl font-medium mb-4">
               Ingredients: {ingredients.length}
@@ -44,6 +45,7 @@ const Recipe = ({ recipe, handleWantToCook }) => {
               {ingredients.length > 6 && "& More Ingredients..."}
             </ul>
           </div>
+          <hr />
           <div className="flex justify-between items-center text-[#282828CC]">
             <p className="flex items-center justify-center">
               <FiClock className="text-xl me-2" />
